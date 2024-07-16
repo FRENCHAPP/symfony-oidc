@@ -1,15 +1,15 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
 use DateInterval;
 use DateTimeImmutable;
-use Drenso\OidcBundle\Enum\OidcTokenType;
-use Drenso\OidcBundle\Exception\OidcConfigurationException;
-use Drenso\OidcBundle\Exception\OidcConfigurationResolveException;
-use Drenso\OidcBundle\Model\OidcTokens;
-use Drenso\OidcBundle\Security\Exception\InvalidJwtTokenException;
-use Drenso\OidcBundle\Security\Exception\OidcAuthenticationException;
+use Faw\OidcBundle\Enum\OidcTokenType;
+use Faw\OidcBundle\Exception\OidcConfigurationException;
+use Faw\OidcBundle\Exception\OidcConfigurationResolveException;
+use Faw\OidcBundle\Model\OidcTokens;
+use Faw\OidcBundle\Security\Exception\InvalidJwtTokenException;
+use Faw\OidcBundle\Security\Exception\OidcAuthenticationException;
 use Exception;
 use JsonException;
 use Lcobucci\JWT\Encoding\JoseEncoder;
@@ -311,7 +311,7 @@ class OidcJwtHelper
 
     if ($this->isCacheEnabled()) {
       try {
-        $this->cacheKey ??= '_drenso_oidc_client__jwks__' . (new AsciiSlugger('en'))->slug($jwksUri);
+        $this->cacheKey ??= '_faw_oidc_client__jwks__' . (new AsciiSlugger('en'))->slug($jwksUri);
         if ($forceNoCache) {
           // Clear the cache item to force refresh
           $this->jwksCache->delete($this->cacheKey);

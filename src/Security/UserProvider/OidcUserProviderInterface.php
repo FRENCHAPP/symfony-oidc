@@ -1,9 +1,9 @@
 <?php
 
-namespace Drenso\OidcBundle\Security\UserProvider;
+namespace Faw\OidcBundle\Security\UserProvider;
 
-use Drenso\OidcBundle\Exception\OidcException;
-use Drenso\OidcBundle\Model\OidcUserData;
+use Faw\OidcBundle\Exception\OidcException;
+use Faw\OidcBundle\Model\OidcUserData;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 

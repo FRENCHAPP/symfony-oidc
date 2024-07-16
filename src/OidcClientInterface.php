@@ -1,13 +1,13 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
-use Drenso\OidcBundle\Exception\OidcCodeChallengeMethodNotSupportedException;
-use Drenso\OidcBundle\Exception\OidcConfigurationException;
-use Drenso\OidcBundle\Exception\OidcConfigurationResolveException;
-use Drenso\OidcBundle\Exception\OidcException;
-use Drenso\OidcBundle\Model\OidcTokens;
-use Drenso\OidcBundle\Model\OidcUserData;
+use Faw\OidcBundle\Exception\OidcCodeChallengeMethodNotSupportedException;
+use Faw\OidcBundle\Exception\OidcConfigurationException;
+use Faw\OidcBundle\Exception\OidcConfigurationResolveException;
+use Faw\OidcBundle\Exception\OidcException;
+use Faw\OidcBundle\Model\OidcTokens;
+use Faw\OidcBundle\Model\OidcUserData;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 

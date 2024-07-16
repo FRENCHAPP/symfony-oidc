@@ -1,12 +1,12 @@
 <?php
 
-namespace Drenso\OidcBundle\EventListener;
+namespace Faw\OidcBundle\EventListener;
 
-use Drenso\OidcBundle\Exception\OidcConfigurationException;
-use Drenso\OidcBundle\Exception\OidcConfigurationResolveException;
-use Drenso\OidcBundle\Exception\OidcException;
-use Drenso\OidcBundle\OidcClientInterface;
-use Drenso\OidcBundle\Security\Token\OidcToken;
+use Faw\OidcBundle\Exception\OidcConfigurationException;
+use Faw\OidcBundle\Exception\OidcConfigurationResolveException;
+use Faw\OidcBundle\Exception\OidcException;
+use Faw\OidcBundle\OidcClientInterface;
+use Faw\OidcBundle\Security\Token\OidcToken;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Security\Http\Event\LogoutEvent;
 use Symfony\Component\Security\Http\HttpUtils;

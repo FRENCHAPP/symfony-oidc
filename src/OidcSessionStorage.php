@@ -1,6 +1,6 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -78,21 +78,21 @@ class OidcSessionStorage
 
   private function codeVerifierKey(): string
   {
-    return 'drenso.oidc.session.code_verifier.' . $this->clientName;
+    return 'faw.oidc.session.code_verifier.' . $this->clientName;
   }
 
   private function nonceKey(): string
   {
-    return 'drenso.oidc.session.nonce.' . $this->clientName;
+    return 'faw.oidc.session.nonce.' . $this->clientName;
   }
 
   private function rememberKey(): string
   {
-    return 'drenso.oidc.session.remember_me.' . $this->clientName;
+    return 'faw.oidc.session.remember_me.' . $this->clientName;
   }
 
   private function stateKey(): string
   {
-    return 'drenso.oidc.session.state.' . $this->clientName;
+    return 'faw.oidc.session.state.' . $this->clientName;
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drenso\OidcBundle\Exception;
+namespace Faw\OidcBundle\Exception;
 
 class OidcConfigurationResolveException extends OidcException
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
 interface OidcWellKnownParserInterface
 {

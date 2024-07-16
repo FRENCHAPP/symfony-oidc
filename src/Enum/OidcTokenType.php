@@ -1,6 +1,6 @@
 <?php
 
-namespace Drenso\OidcBundle\Enum;
+namespace Faw\OidcBundle\Enum;
 
 enum OidcTokenType
 {

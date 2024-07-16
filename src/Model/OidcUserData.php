@@ -1,6 +1,6 @@
 <?php
 
-namespace Drenso\OidcBundle\Model;
+namespace Faw\OidcBundle\Model;
 
 use stdClass;
 use Symfony\Component\PropertyAccess\PropertyAccess;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
-use Drenso\OidcBundle\Security\Exception\OidcAuthenticationException;
+use Faw\OidcBundle\Security\Exception\OidcAuthenticationException;
 
 /**
  * Helper for resource loading.
@@ -44,7 +44,7 @@ class OidcUrlFetcher
 
     // Add a User-Agent header to prevent firewall blocks
     $curlVersion = curl_version()['version'];
-    $headers[]   = "User-Agent: curl/$curlVersion drenso/symfony-oidc";
+    $headers[]   = "User-Agent: curl/$curlVersion faw/symfony-oidc";
 
     // Add custom headers to a existing headers
     $headers = array_merge($headers, $this->customClientHeaders);

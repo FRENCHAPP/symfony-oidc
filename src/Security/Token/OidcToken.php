@@ -1,9 +1,9 @@
 <?php
 
-namespace Drenso\OidcBundle\Security\Token;
+namespace Faw\OidcBundle\Security\Token;
 
-use Drenso\OidcBundle\Model\OidcTokens;
-use Drenso\OidcBundle\Model\OidcUserData;
+use Faw\OidcBundle\Model\OidcTokens;
+use Faw\OidcBundle\Model\OidcUserData;
 use Symfony\Component\Security\Http\Authenticator\Passport\Passport;
 use Symfony\Component\Security\Http\Authenticator\Token\PostAuthenticationToken;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Drenso\OidcBundle\Security;
+namespace Faw\OidcBundle\Security;
 
-use Drenso\OidcBundle\Exception\OidcException;
-use Drenso\OidcBundle\OidcClientInterface;
-use Drenso\OidcBundle\OidcJwtHelper;
-use Drenso\OidcBundle\OidcSessionStorage;
-use Drenso\OidcBundle\Security\Exception\OidcAuthenticationException;
-use Drenso\OidcBundle\Security\Exception\UnsupportedManagerException;
-use Drenso\OidcBundle\Security\Token\OidcToken;
-use Drenso\OidcBundle\Security\UserProvider\OidcUserProviderInterface;
+use Faw\OidcBundle\Exception\OidcException;
+use Faw\OidcBundle\OidcClientInterface;
+use Faw\OidcBundle\OidcJwtHelper;
+use Faw\OidcBundle\OidcSessionStorage;
+use Faw\OidcBundle\Security\Exception\OidcAuthenticationException;
+use Faw\OidcBundle\Security\Exception\UnsupportedManagerException;
+use Faw\OidcBundle\Security\Token\OidcToken;
+use Faw\OidcBundle\Security\UserProvider\OidcUserProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;

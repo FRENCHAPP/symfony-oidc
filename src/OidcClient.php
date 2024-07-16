@@ -1,14 +1,14 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
-use Drenso\OidcBundle\Exception\OidcCodeChallengeMethodNotSupportedException;
-use Drenso\OidcBundle\Exception\OidcConfigurationException;
-use Drenso\OidcBundle\Exception\OidcConfigurationResolveException;
-use Drenso\OidcBundle\Exception\OidcException;
-use Drenso\OidcBundle\Model\OidcTokens;
-use Drenso\OidcBundle\Model\OidcUserData;
-use Drenso\OidcBundle\Security\Exception\OidcAuthenticationException;
+use Faw\OidcBundle\Exception\OidcCodeChallengeMethodNotSupportedException;
+use Faw\OidcBundle\Exception\OidcConfigurationException;
+use Faw\OidcBundle\Exception\OidcConfigurationResolveException;
+use Faw\OidcBundle\Exception\OidcException;
+use Faw\OidcBundle\Model\OidcTokens;
+use Faw\OidcBundle\Model\OidcUserData;
+use Faw\OidcBundle\Security\Exception\OidcAuthenticationException;
 use Exception;
 use InvalidArgumentException;
 use LogicException;
@@ -463,7 +463,7 @@ class OidcClient implements OidcClientInterface
 
     if ($this->wellKnownCache && $this->wellKnownCacheTime !== null) {
       try {
-        $this->cacheKey ??= '_drenso_oidc_client__well_known__' . (new AsciiSlugger('en'))->slug($this->wellKnownUrl);
+        $this->cacheKey ??= '_faw_oidc_client__well_known__' . (new AsciiSlugger('en'))->slug($this->wellKnownUrl);
         $config         = $this->wellKnownCache->get($this->cacheKey, function (ItemInterface $item) {
           $item->expiresAfter($this->wellKnownCacheTime);
 

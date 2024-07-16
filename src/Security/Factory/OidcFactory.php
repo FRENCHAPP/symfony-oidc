@@ -1,10 +1,10 @@
 <?php
 
-namespace Drenso\OidcBundle\Security\Factory;
+namespace Faw\OidcBundle\Security\Factory;
 
-use Drenso\OidcBundle\DependencyInjection\DrensoOidcExtension;
-use Drenso\OidcBundle\EventListener\OidcEndSessionSubscriber;
-use Drenso\OidcBundle\Security\Exception\UnsupportedManagerException;
+use Faw\OidcBundle\DependencyInjection\FawOidcExtension;
+use Faw\OidcBundle\EventListener\OidcEndSessionSubscriber;
+use Faw\OidcBundle\Security\Exception\UnsupportedManagerException;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\AbstractFactory;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\AuthenticatorFactoryInterface;
 use Symfony\Component\DependencyInjection\ChildDefinition;
@@ -47,14 +47,14 @@ class OidcFactory extends AbstractFactory implements AuthenticatorFactoryInterfa
     array $config,
     string $userProviderId): string
   {
-    $authenticatorId = sprintf('%s.%s', DrensoOidcExtension::AUTHENTICATOR_ID, $firewallName);
-    $clientReference = new Reference(sprintf('%s.%s', DrensoOidcExtension::CLIENT_ID, $config['client']));
+    $authenticatorId = sprintf('%s.%s', FawOidcExtension::AUTHENTICATOR_ID, $firewallName);
+    $clientReference = new Reference(sprintf('%s.%s', FawOidcExtension::CLIENT_ID, $config['client']));
 
     $container
-      ->setDefinition($authenticatorId, new ChildDefinition(DrensoOidcExtension::AUTHENTICATOR_ID))
+      ->setDefinition($authenticatorId, new ChildDefinition(FawOidcExtension::AUTHENTICATOR_ID))
       ->addArgument(new Reference('security.http_utils'))
       ->addArgument($clientReference)
-      ->addArgument(new Reference(sprintf('%s.%s', DrensoOidcExtension::SESSION_STORAGE_ID, $config['client'])))
+      ->addArgument(new Reference(sprintf('%s.%s', FawOidcExtension::SESSION_STORAGE_ID, $config['client'])))
       ->addArgument(new Reference($userProviderId))
       ->addArgument(new Reference($this->createAuthenticationSuccessHandler($container, $firewallName, $config)))
       ->addArgument(new Reference($this->createAuthenticationFailureHandler($container, $firewallName, $config)))
@@ -68,7 +68,7 @@ class OidcFactory extends AbstractFactory implements AuthenticatorFactoryInterfa
 
     // Check if "logout" config is specified in the firewall and "enable_end_session_listener" is set to true
     if ($config['enable_end_session_listener'] && $container->hasDefinition($logoutListenerId)) {
-      $endSessionListenerId = sprintf('%s.%s', DrensoOidcExtension::END_SESSION_LISTENER_ID, $firewallName);
+      $endSessionListenerId = sprintf('%s.%s', FawOidcExtension::END_SESSION_LISTENER_ID, $firewallName);
 
       /** If "use_logout_target_path" is true (default) pass the target path to the {@see OidcEndSessionSubscriber} */
       $logoutTargetPath = $config['use_logout_target_path']

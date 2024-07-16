@@ -1,6 +1,6 @@
 <?php
 
-namespace Drenso\OidcBundle\Security\Exception;
+namespace Faw\OidcBundle\Security\Exception;
 
 use RuntimeException;
 

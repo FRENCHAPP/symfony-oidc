@@ -1,10 +1,10 @@
 <?php
 
-namespace Drenso\OidcBundle\Model;
+namespace Faw\OidcBundle\Model;
 
 use DateTimeImmutable;
-use Drenso\OidcBundle\Enum\OidcTokenType;
-use Drenso\OidcBundle\Exception\OidcException;
+use Faw\OidcBundle\Enum\OidcTokenType;
+use Faw\OidcBundle\Exception\OidcException;
 use stdClass;
 
 /**

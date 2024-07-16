@@ -1,8 +1,8 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
-use Drenso\OidcBundle\Enum\OidcTokenType;
+use Faw\OidcBundle\Enum\OidcTokenType;
 use Lcobucci\JWT\Validation\Constraint;
 
 interface OidcTokenConstraintProviderInterface

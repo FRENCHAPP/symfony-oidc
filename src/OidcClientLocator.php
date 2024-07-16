@@ -1,8 +1,8 @@
 <?php
 
-namespace Drenso\OidcBundle;
+namespace Faw\OidcBundle;
 
-use Drenso\OidcBundle\Exception\OidcClientNotFoundException;
+use Faw\OidcBundle\Exception\OidcClientNotFoundException;
 use Psr\Container\ContainerInterface;
 use Throwable;
 
