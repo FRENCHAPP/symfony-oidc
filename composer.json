@@ -59,10 +59,5 @@
   },
   "config": {
     "sort-packages": true
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "v3.x-dev"
-    }
   }
 }
