@@ -1,5 +1,5 @@
 {
-  "name": "drenso/symfony-oidc-bundle",
+  "name": "frenchapp/symfony-oidc",
   "description": "OpenID connect bundle for Symfony",
   "keywords": [
     "symfony",
