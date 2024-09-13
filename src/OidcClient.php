@@ -206,16 +206,7 @@ class OidcClient implements OidcClientInterface
     // Retrieve the user information and convert the encoding to UTF-8 to harden for surfconext UTF-8 bug
     $jsonData = $this->urlFetcher->fetchUrl($this->getUserinfoEndpoint(), null, $headers);
     $jsonData = mb_convert_encoding($jsonData, 'UTF-8');
-
-    // Read the data
-    $data = json_decode($jsonData, true);
-
-    // Check data due
-    if (!is_array($data)) {
-      throw new OidcException('Error retrieving the user info from the endpoint.');
-    }
-
-    return new OidcUserData($data);
+    return new OidcUserData(OidcJwtHelper::parseToken($jsonData)->claims()->all());
   }
 
   /**
