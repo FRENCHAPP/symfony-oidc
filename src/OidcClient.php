@@ -247,7 +247,7 @@ class OidcClient implements OidcClientInterface
 
   protected function getRedirectUrl(): string
   {
-    return $this->httpUtils->generateUri($this->requestStack->getCurrentRequest(), $this->redirectRoute) . "?client=BO";
+    return $this->httpUtils->generateUri($this->requestStack->getCurrentRequest(), $this->redirectRoute);
   }
 
   /**
